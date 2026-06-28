@@ -379,8 +379,7 @@ function normalizeCategories(data) {
   // Aceita data.categorias (array) ou objeto chaveado
   if (Array.isArray(data.categorias)) {
     return data.categorias.map((c) => ({
-      nome: c.nome ?? c.name ?? '—',
-      score: clampScore(c.score ?? c.valor ?? 0),
+nome: c.descricao ?? c.categoria ?? c.nome ?? c.name ?? '—',      score: clampScore(c.score ?? c.valor ?? 0),
       feedback: c.feedback ?? c.descricao ?? '',
     }));
   }

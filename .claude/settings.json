@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'feat: add semantic HTML structure for ATSReady landing page *)",
+      "Bash(git commit -q -m 'style: add glassmorphism design system and responsive layout *)",
+      "Bash(git commit -q -m 'feat: add interactive behavior and API integration *)",
+      "Bash(git commit -q -m 'docs: document project, stack, features and API contract *)"
+    ]
+  }
+}
