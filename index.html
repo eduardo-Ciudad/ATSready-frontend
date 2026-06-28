@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ATSReady — Seu currículo pronto para passar por qualquer ATS. Analise seu currículo contra a vaga desejada e descubra o que melhorar." />
+  <title>ATSReady — Seu currículo pronto para passar por qualquer ATS</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background blobs decorativos -->
+  <div class="bg-blobs" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner" aria-label="Navegação principal">
+      <a href="#hero" class="logo" aria-label="ATSReady — início">
+        <span class="logo-icon" aria-hidden="true">
+          <i data-lucide="file-check-2"></i>
+        </span>
+        <span class="logo-text">ATS<span class="logo-accent">Ready</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#como-funciona" class="nav-link">Como funciona</a></li>
+        <li><a href="#metricas" class="nav-link">Métricas</a></li>
+        <li><a href="#analisar" class="nav-link">Analisar</a></li>
+      </ul>
+
+      <a href="#analisar" class="btn btn-glass nav-cta">Analisar Currículo</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Painel mobile slide-in -->
+  <div class="mobile-overlay" id="mobileOverlay" hidden></div>
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="mobile-close" id="mobileClose" aria-label="Fechar menu">
+      <i data-lucide="x"></i>
+    </button>
+    <nav aria-label="Navegação mobile">
+      <a href="#como-funciona" class="mobile-link">Como funciona</a>
+      <a href="#metricas" class="mobile-link">Métricas</a>
+      <a href="#analisar" class="mobile-link">Analisar</a>
+      <a href="#analisar" class="btn btn-primary mobile-cta">Analisar Currículo</a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-animate>
+          <span class="hero-badge">
+            <i data-lucide="sparkles" aria-hidden="true"></i>
+            Análise inteligente de currículos
+          </span>
+          <h1 class="hero-title">
+            Seu currículo está pronto para os <span class="gradient-text">robôs de triagem</span>?
+          </h1>
+          <p class="hero-sub">
+            O ATSReady analisa seu currículo contra a vaga desejada e mostra exatamente
+            o que melhorar para passar pelos filtros automáticos dos recrutadores.
+          </p>
+          <div class="hero-actions">
+            <a href="#analisar" class="btn btn-primary">
+              Analisar Agora
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#como-funciona" class="btn btn-outline">Como Funciona</a>
+          </div>
+        </div>
+
+        <!-- Mockup estático decorativo -->
+        <div class="hero-mockup" data-animate aria-hidden="true">
+          <div class="glass mockup-card">
+            <div class="mockup-header">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-title">Resultado da análise</span>
+            </div>
+
+            <div class="mockup-score">
+              <div class="score-ring" style="--val: 78;">
+                <div class="score-ring-inner">
+                  <span class="score-num">78</span>
+                  <span class="score-pct">%</span>
+                </div>
+              </div>
+              <div class="mockup-score-meta">
+                <span class="badge badge-success">Alta aderência</span>
+                <p>Seu currículo vai direto pro topo da pilha.</p>
+              </div>
+            </div>
+
+            <div class="mockup-bars">
+              <div class="bar-row">
+                <div class="bar-label"><span>Keywords</span><span>65%</span></div>
+                <div class="bar-track"><div class="bar-fill warn" style="width:65%"></div></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label"><span>Cronologia</span><span>90%</span></div>
+                <div class="bar-track"><div class="bar-fill success" style="width:90%"></div></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label"><span>Impacto</span><span>55%</span></div>
+                <div class="bar-track"><div class="bar-fill warn" style="width:55%"></div></div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-label"><span>Formatação</span><span>85%</span></div>
+                <div class="bar-track"><div class="bar-fill success" style="width:85%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ COMO FUNCIONA ============ -->
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-head" data-animate>
+          <span class="eyebrow">Como funciona</span>
+          <h2>Simples, rápido e direto</h2>
+          <p class="section-desc">Três passos para descobrir se seu currículo passa pela triagem automática.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="glass card step-card" data-animate>
+            <span class="step-num" aria-hidden="true">01</span>
+            <span class="card-icon"><i data-lucide="upload-cloud"></i></span>
+            <h3>Envie seu currículo</h3>
+            <p>Faça upload do PDF do seu currículo.</p>
+          </article>
+          <article class="glass card step-card" data-animate style="--delay:.1s">
+            <span class="step-num" aria-hidden="true">02</span>
+            <span class="card-icon"><i data-lucide="clipboard-list"></i></span>
+            <h3>Cole a vaga</h3>
+            <p>Cole a descrição completa da vaga desejada.</p>
+          </article>
+          <article class="glass card step-card" data-animate style="--delay:.2s">
+            <span class="step-num" aria-hidden="true">03</span>
+            <span class="card-icon"><i data-lucide="bar-chart-3"></i></span>
+            <h3>Receba a análise</h3>
+            <p>Veja seu score, pontos fortes e o que melhorar.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTRICAS ============ -->
+    <section class="section" id="metricas">
+      <div class="container">
+        <div class="section-head" data-animate>
+          <span class="eyebrow">Métricas avaliadas</span>
+          <h2>O que o ATSReady analisa</h2>
+          <p class="section-desc">Quatro dimensões que definem se você passa pelos filtros automáticos.</p>
+        </div>
+
+        <div class="metrics-grid">
+          <article class="glass card metric-card" data-animate>
+            <span class="card-icon"><i data-lucide="search"></i></span>
+            <h3>Palavras-Chave</h3>
+            <p>Verificamos se os termos técnicos e habilidades exigidos na vaga estão presentes no seu currículo.</p>
+          </article>
+          <article class="glass card metric-card" data-animate style="--delay:.1s">
+            <span class="card-icon"><i data-lucide="calendar-clock"></i></span>
+            <h3>Cronologia</h3>
+            <p>Analisamos a estrutura temporal da sua carreira: ordem, gaps e consistência.</p>
+          </article>
+          <article class="glass card metric-card" data-animate style="--delay:.2s">
+            <span class="card-icon"><i data-lucide="trending-up"></i></span>
+            <h3>Impacto</h3>
+            <p>Identificamos se você apresenta resultados quantificáveis: métricas, números e conquistas mensuráveis.</p>
+          </article>
+          <article class="glass card metric-card" data-animate style="--delay:.3s">
+            <span class="card-icon"><i data-lucide="layout-template"></i></span>
+            <h3>Formatação</h3>
+            <p>Checamos se a estrutura do seu currículo é compatível com a leitura dos robôs ATS.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAIXAS DE SCORE ============ -->
+    <section class="section" id="faixas">
+      <div class="container">
+        <div class="section-head" data-animate>
+          <span class="eyebrow">Faixas de score</span>
+          <h2>Entenda seu resultado</h2>
+          <p class="section-desc">Cada faixa indica o destino do seu currículo na triagem.</p>
+        </div>
+
+        <div class="ranges">
+          <div class="glass range range-low" data-animate>
+            <span class="range-emoji" aria-hidden="true">🔴</span>
+            <div class="range-body">
+              <div class="range-top">
+                <h3>Abaixo de 50%</h3>
+                <span class="range-tag">Baixa aderência</span>
+              </div>
+              <p>Seu currículo será descartado automaticamente.</p>
+              <div class="range-bar"><span style="width:40%"></span></div>
+            </div>
+          </div>
+
+          <div class="glass range range-mid" data-animate style="--delay:.1s">
+            <span class="range-emoji" aria-hidden="true">🟡</span>
+            <div class="range-body">
+              <div class="range-top">
+                <h3>50% a 74%</h3>
+                <span class="range-tag">Média aderência</span>
+              </div>
+              <p>Você entra na fila, mas sem prioridade.</p>
+              <div class="range-bar"><span style="width:62%"></span></div>
+            </div>
+          </div>
+
+          <div class="glass range range-high" data-animate style="--delay:.2s">
+            <span class="range-emoji" aria-hidden="true">🟢</span>
+            <div class="range-body">
+              <div class="range-top">
+                <h3>75% ou mais</h3>
+                <span class="range-tag">Alta aderência</span>
+              </div>
+              <p>Seu currículo vai direto pro topo da pilha.</p>
+              <div class="range-bar"><span style="width:88%"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ANALISAR (FORMULÁRIO) ============ -->
+    <section class="section" id="analisar">
+      <div class="container">
+        <div class="section-head" data-animate>
+          <span class="eyebrow">Comece agora</span>
+          <h2>Analise seu currículo agora</h2>
+          <p class="section-desc">Envie o PDF e cole a vaga. Em segundos você recebe seu diagnóstico ATS.</p>
+        </div>
+
+        <div class="glass analyze-card" data-animate>
+          <form id="analyzeForm" novalidate>
+            <!-- Upload drag & drop -->
+            <div class="field">
+              <label class="field-label" for="fileInput">Currículo (PDF)</label>
+              <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Arraste seu PDF aqui ou clique para selecionar">
+                <input type="file" id="fileInput" name="curriculo" accept="application/pdf,.pdf" hidden />
+                <div class="dropzone-empty" id="dropzoneEmpty">
+                  <span class="dropzone-icon"><i data-lucide="upload-cloud"></i></span>
+                  <p class="dropzone-title">Arraste seu PDF aqui ou <span class="link-like">clique para selecionar</span></p>
+                  <p class="dropzone-hint">Apenas arquivos .pdf</p>
+                </div>
+                <div class="dropzone-filled" id="dropzoneFilled" hidden>
+                  <span class="file-check"><i data-lucide="check"></i></span>
+                  <span class="file-name" id="fileName">arquivo.pdf</span>
+                  <button type="button" class="file-remove" id="fileRemove" aria-label="Remover arquivo">
+                    <i data-lucide="x"></i>
+                  </button>
+                </div>
+              </div>
+              <p class="field-error" id="fileError" hidden>Selecione um arquivo PDF para continuar.</p>
+            </div>
+
+            <!-- Textarea descrição da vaga -->
+            <div class="field">
+              <label class="field-label" for="jobDesc">Descrição da vaga</label>
+              <textarea id="jobDesc" name="descricaoVaga" rows="7"
+                placeholder="Cole aqui a descrição completa da vaga..." maxlength="8000"></textarea>
+              <div class="field-meta">
+                <span class="field-error" id="descError" hidden>Cole a descrição da vaga para continuar.</span>
+                <span class="char-count" id="charCount">0 / 8000</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-label">Analisar Currículo</span>
+              <span class="spinner" hidden></span>
+            </button>
+          </form>
+
+          <!-- Área de resultado -->
+          <div class="result" id="result" hidden aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo footer-logo">
+        <span class="logo-icon" aria-hidden="true"><i data-lucide="file-check-2"></i></span>
+        <span class="logo-text">ATS<span class="logo-accent">Ready</span></span>
+      </div>
+      <p class="footer-text">ATSReady © 2025 — Feito por Eduardo Ciudad</p>
+      <a class="footer-link" href="https://github.com/eduardo-Ciudad" target="_blank" rel="noopener noreferrer">
+        <i data-lucide="github" aria-hidden="true"></i> GitHub
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
